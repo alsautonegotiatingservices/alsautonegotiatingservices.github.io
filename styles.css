@@ -1,0 +1,210 @@
+body {
+    --accent-color: rgb(30, 27, 56);
+    --accent-color-light: hsl(from var(--accent-color) h calc(s + 10) calc(l + 10));
+    --accent-color-lightest: hsl(from var(--accent-color) h calc(s + 30) calc(l + 30));
+    --bg-color-tan: rgb(226, 225, 218);
+    --bg-color-blue: rgb(219, 229, 255);
+
+    margin: 0;
+    background-color: var(--bg-color-tan);
+    color: rgb(29, 29, 29);
+    font-family: Verdana;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#menu {
+    background-color: var(--accent-color);
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+
+    #logo {
+        position: relative;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        height: 12rem;
+    }
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#menu li {
+    list-style-type: none;
+    padding: 0.5rem;
+}
+
+#menu a {
+    color: white;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    border-radius: 2px;
+}
+
+#menu a:hover {
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+#main-page {
+    background-color: var(--bg-color-tan);
+}
+
+.main-item {
+    margin: auto;
+    max-width: 980px;
+    padding: 3rem 2rem;
+    display: block;
+
+    h3 {
+        margin-top: 0;
+        color: var(--accent-color-light);
+    }
+}
+
+#welcome-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), var(--accent-color)), url('assets/car-icon.png');
+    background-size: 200px;
+    background-position-x: -1rem;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    height: 20rem;
+    align-content: center;
+    margin: 0;
+    max-width: 100%;
+    padding: 3rem 0;
+
+    div {
+        height: 100%;
+        max-width: 980px;
+        margin: auto;
+        padding-left: 2rem;
+    }
+}
+
+#welcome-image h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 3em;
+
+    span {
+        font-size: 0.5em;
+    }
+}
+
+#let-me-help-you {
+    background: white;
+    margin-top: -3rem;
+    max-width: 720px;
+}
+
+#testimonials {
+    ul {
+        display: flex;
+        flex-direction: row;
+
+        @media screen and (max-width: 960px) {
+            flex-direction: column;
+
+            li {
+                margin: 1rem 0;
+            }
+        }
+
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0;
+
+        li {
+            flex-shrink: 0;
+            list-style-type: none;
+            background-color: white;
+            flex-basis: 25%;
+            padding: 1rem;
+        }
+    }
+}
+
+#contact-me {
+    background-color: white;
+    margin: 0;
+    max-width: 100%;
+
+    div {
+        max-width: 980px;
+    }
+
+    form {
+        padding: 1rem 0;
+    }
+    
+    input {
+        display: block;
+        margin: 0.25rem 0;
+        box-sizing: border-box;
+        margin-bottom: 0.5rem;
+        padding: 0.25rem;
+
+        @media screen and (max-width: 960px) {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+    }
+
+    .contact-info {
+        color: var(--accent-color-lightest);
+        text-decoration: none;
+    }
+
+    .paragraph-input {
+        width: 80%;
+        font-family: Arial;
+        box-sizing: border-box;
+        padding: 0.25rem;
+
+        @media screen and (max-width: 960px) {
+            width: 100%;
+            padding: 0.5rem;
+        }
+    }
+
+    #contactee-submit {
+        margin-top: 2rem;
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 0.5rem 2rem;
+        cursor: pointer;
+        border-radius: 4px;
+
+        @media screen and (max-width: 960px) {
+            width: 100%;
+            padding: 0.5rem;
+        }
+    }
+
+    #contactee-submit:hover {
+        background-color: rgb(57, 57, 255);
+    }
+}
+
+#footer {
+    display: block;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1rem;
+}
